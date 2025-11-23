@@ -1,0 +1,40 @@
+═══════════════════════════════════════════════════════════════
+  PUSH TO GITHUB - INSTRUCTIONS
+═══════════════════════════════════════════════════════════════
+
+YOUR GITHUB USERNAME: bhargavaramkv
+
+STEP 1: Create Repository on GitHub
+   → Go to: https://github.com/new
+   → Repository name: portfolio (or your choice)
+   → Make it Public or Private
+   → DON'T check "Initialize with README"
+   → Click "Create repository"
+
+STEP 2: Push Your Code
+   Run these commands (replace REPO_NAME with your actual repo name):
+
+   git remote add origin https://github.com/bhargavaramkv/REPO_NAME.git
+   git push -u origin main
+
+EXAMPLE:
+   If you named your repo "portfolio":
+   
+   git remote add origin https://github.com/bhargavaramkv/portfolio.git
+   git push -u origin main
+
+═══════════════════════════════════════════════════════════════
+
+WHAT'S READY TO PUSH:
+   ✅ 4 commits with all your code
+   ✅ Clean project structure
+   ✅ .gitignore configured
+   ✅ README.md with documentation
+   ✅ Setup guides included
+
+AFTER PUSHING:
+   → Your code will be on GitHub
+   → You can deploy to Vercel or Netlify
+   → Share the repo with others
+
+═══════════════════════════════════════════════════════════════
