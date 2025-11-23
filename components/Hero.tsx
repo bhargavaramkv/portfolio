@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowDown, FileText, Send } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { ArrowDown, FileText, Send, Terminal, Code2, Cpu } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
@@ -74,19 +74,47 @@ export const Hero: React.FC = () => {
                 </div>
              </div>
 
-             {/* Image Area */}
-             <div className="absolute inset-0 mt-8 mx-2 mb-14 border-2 border-gray-200 bg-gray-100 overflow-hidden">
-                <img 
-                  src="/profile.jpg" 
-                  alt="Bhargava Ram K V" 
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://ui-avatars.com/api/?name=Bhargava+Ram&background=0D8ABC&color=fff&size=512&font-size=0.3";
-                  }}
-                />
+             {/* Animated Terminal Area */}
+             <div className="absolute inset-0 mt-8 mx-2 mb-14 border-2 border-gray-200 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-hidden">
+                {/* Matrix-style background */}
+                <div className="absolute inset-0 opacity-20">
+                  <div className="absolute inset-0 bg-[linear-gradient(transparent_0%,rgba(0,100,255,0.1)_50%,transparent_100%)] bg-[length:100%_4px] animate-pulse"></div>
+                </div>
                 
-                {/* Halftone overlay effect */}
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')] opacity-10 pointer-events-none"></div>
+                {/* Terminal Content */}
+                <div className="relative h-full p-4 font-mono text-xs text-green-400 overflow-hidden">
+                  <div className="mb-2 text-blue-400">$ whoami</div>
+                  <div className="mb-3 text-white">bhargava-ram-k-v</div>
+                  
+                  <div className="mb-2 text-blue-400">$ cat skills.json</div>
+                  <div className="mb-3 text-gray-300">
+                    <div>{'{'}</div>
+                    <div className="pl-4">"backend": [".NET Core", "C#"],</div>
+                    <div className="pl-4">"cloud": ["Azure", "Docker"],</div>
+                    <div className="pl-4">"database": ["MongoDB", "SQL"],</div>
+                    <div className="pl-4">"architecture": "Microservices"</div>
+                    <div>{'}'}</div>
+                  </div>
+                  
+                  <div className="mb-2 text-blue-400">$ status</div>
+                  <div className="text-green-400 animate-pulse">● ONLINE - Available for hire</div>
+                  
+                  <div className="mt-4 flex items-center gap-2 text-blue-400">
+                    <Terminal size={16} />
+                    <span className="animate-pulse">_</span>
+                  </div>
+                </div>
+                
+                {/* Floating Tech Icons */}
+                <div className="absolute top-4 right-4 opacity-30 group-hover:opacity-60 transition-opacity">
+                  <Code2 size={32} className="text-blue-400 animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }} />
+                </div>
+                <div className="absolute bottom-20 right-8 opacity-30 group-hover:opacity-60 transition-opacity">
+                  <Cpu size={28} className="text-yellow-400 animate-bounce" style={{ animationDelay: '1s', animationDuration: '3s' }} />
+                </div>
+                
+                {/* Scan line effect */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/10 to-transparent h-full animate-scan pointer-events-none"></div>
              </div>
 
              {/* Footer Stats */}
