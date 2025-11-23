@@ -77,9 +77,12 @@ export const Hero: React.FC = () => {
              {/* Image Area */}
              <div className="absolute inset-0 mt-8 mx-2 mb-14 border-2 border-gray-200 bg-gray-100 overflow-hidden">
                 <img 
-                  src="https://ui-avatars.com/api/?name=Bhargava+Ram&background=0D8ABC&color=fff&size=512&font-size=0.3" 
+                  src="/profile.jpg" 
                   alt="Bhargava Ram K V" 
                   className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://ui-avatars.com/api/?name=Bhargava+Ram&background=0D8ABC&color=fff&size=512&font-size=0.3";
+                  }}
                 />
                 
                 {/* Halftone overlay effect */}

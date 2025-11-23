@@ -1,0 +1,53 @@
+═══════════════════════════════════════════════════════════════
+  HOW TO ADD YOUR PROFILE IMAGE
+═══════════════════════════════════════════════════════════════
+
+STEP 1: Save Your Image
+   → Save your profile picture in the "public" folder
+   → Name it: profile.jpg
+   → Location: public/profile.jpg
+
+STEP 2: Commit and Push
+   Run these commands:
+   
+   git add .
+   git commit -m "Add profile image"
+   git push
+
+STEP 3: Deploy (Choose One)
+
+   EASIEST - Vercel (Recommended):
+   → Go to: https://vercel.com/
+   → Sign in with GitHub
+   → Click "New Project"
+   → Import your "portfolio" repository
+   → Add environment variable: VITE_GEMINI_API_KEY
+   → Click Deploy
+   → Done! Your site is live in 2 minutes
+
+   OR - Netlify:
+   → Go to: https://netlify.com/
+   → Sign in with GitHub
+   → "New site from Git"
+   → Select your repository
+   → Build: npm run build
+   → Publish: dist
+   → Add environment variable: VITE_GEMINI_API_KEY
+   → Deploy
+
+═══════════════════════════════════════════════════════════════
+
+IMPORTANT: Get your Gemini API Key
+   → Visit: https://aistudio.google.com/
+   → Create/copy your API key
+   → Add it as VITE_GEMINI_API_KEY in Vercel/Netlify
+
+═══════════════════════════════════════════════════════════════
+
+Your site will be live at:
+   Vercel: https://portfolio-[random].vercel.app
+   Netlify: https://[random].netlify.app
+
+You can customize the domain in settings!
+
+═══════════════════════════════════════════════════════════════
