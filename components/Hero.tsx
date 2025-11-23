@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { ArrowDown, FileText, Send, Terminal, Code2, Cpu } from 'lucide-react';
 
 export const Hero: React.FC = () => {
